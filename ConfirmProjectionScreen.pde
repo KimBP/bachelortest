@@ -53,9 +53,9 @@ public void confirmProjection() {
       blueTime = pixel.getBlue();
     }
 
-    pictureDuration = (redTime > pictureDuration ? redTime:pictureDuration);
-    pictureDuration = (greenTime > pictureDuration ? greenTime:pictureDuration);
-    pictureDuration = (blueTime > pictureDuration ? blueTime:pictureDuration);
+    pictureDuration = (redTime > pictureDuration ? redTime : pictureDuration);
+    pictureDuration = (greenTime > pictureDuration ? greenTime : pictureDuration);
+    pictureDuration = (blueTime > pictureDuration ? blueTime : pictureDuration);
 
     pictureTimesArray.get(redTime).add(i);
     pictureTimesArray.get(greenTime).add(i);
