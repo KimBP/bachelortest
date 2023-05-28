@@ -6,13 +6,14 @@ public void projection() {
   int savedTime = millis();
   while (!isFinished) {
     int timePassed = (millis() - savedTime);
-    for (int p = 0; p < pictureTimesArray.get(time).size(); p++) {
-      //int newRedColor = 0;
-      //int newGreenColor = 0;
-      //int newBlueColor = 0;
-      int redColor = (int)red(projectionImg.pixels[pictureTimesArray.get(time).get(p)]);
-      int greenColor = (int)green(projectionImg.pixels[pictureTimesArray.get(time).get(p)]);
-      int blueColor = (int)blue(projectionImg.pixels[pictureTimesArray.get(time).get(p)]);
+    ArrayList<int> timeArray = pictureTimesArray.get(time);
+    for (int p = 0; p < timeArray.size(); p++) {
+
+      int pixel = timeArray.get(p);
+      color pixelColor = projectionImg.pixels[pixel];
+      int redColor = (int)red(pixelColor);
+      int greenColor = (int)green(pixelColor);
+      int blueColor = (int)blue(pixelColor);
 
       int pixelRedTime = 0;
       int pixelGreenTime = 0;
@@ -35,7 +36,7 @@ public void projection() {
       int newGreenColor = (time >= pixelGreenTime ? 0:255);
       int newBlueColor = (time >= pixelBlueTime ? 0:255);
 
-      projectedImage.pixels[pictureTimesArray.get(time).get(p)] = color(newRedColor, newGreenColor, newBlueColor);
+      projectedImage.pixels[pixel] = color(newRedColor, newGreenColor, newBlueColor);
 
     }
     if (timePassed >= updateTime) {
