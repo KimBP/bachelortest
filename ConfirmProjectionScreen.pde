@@ -63,11 +63,23 @@ public void confirmProjection() {
     pictureTimesArray.get(greenTime).add(i);
     pictureTimesArray.get(blueTime).add(i);
 
-    
+    if (debugPixel == i) {
+       println("DEBUG pixel: " + i);
+       println("      color: " + r + " " + g + " " + b);
+       println("       time: " + redTime + " " + greenTime + " " + blueTime);
+       println("  array pos: " + pictureTimesArray.get(redTime).size +
+                           " " + pictureTimesArray.get(greenTime).size +
+                           " " + pictureTimesArray.get(blueTime).size);
+    } 
     r = (r != 0 ? 255 : 0);
     g = (g != 0 ? 255 : 0);
     b = (b != 0 ? 255 : 0);
 
     projectedImage.pixels[i] = color(r, g, b);
+
+    if (debugPixel == i) {
+       println("  proj. col: " + r + " " + g + " " + b);
+    } 
+
   }
 }

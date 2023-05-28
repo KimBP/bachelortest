@@ -24,6 +24,8 @@ ProjectorScreen projectorScreen;
 
 Serial ser;
 
+// Debug a specifix pixel
+int debugPixel = 1024 * 512; // Approximately center pixel of prim_colors
 
 static final int Red = 0;
 static final int Green = 1;

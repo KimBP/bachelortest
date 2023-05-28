@@ -38,6 +38,14 @@ public void projection() {
 
       projectedImage.pixels[pixel] = color(newRedColor, newGreenColor, newBlueColor);
 
+      if (pixel == debugPixel) {
+        println("DEBUG pixel: " + i);
+        println("       time          : " + time);
+	println("       img. color    : " + redColor + " " + greenColor + " " + blueColor);
+        println("       time          : " + pixelRedTime + " " + pixelGreenTime + " " + pixelBlueTime);
+        println("       new proj color: " + newRedColor + " " + newGreenColor + " " + newBlueColor); 
+        println("       array pos     : " + p + " of " + timeArray.size());
+      }
     }
     if (timePassed >= updateTime) {
       // Behind schedule - immediately handle next time
