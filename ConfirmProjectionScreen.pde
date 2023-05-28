@@ -27,9 +27,9 @@ public void confirmProjection() {
 
   getLidarData();
   println(lidarDistance);  
-  pictureTimesArray = new ArrayList<ArrayList<Integer>>();
+  pictureTimesArray = new ArrayList<ArrayList<int>>();
   for (int i = 0; i <= highestTime; i++) {
-    pictureTimesArray.add(new ArrayList<Integer>());
+    pictureTimesArray.add(new ArrayList<int>());
   }
 
   for (int i = 0; i < projectionImg.pixels.length; i++) {

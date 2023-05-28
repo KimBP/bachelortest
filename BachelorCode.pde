@@ -79,7 +79,7 @@ String selectedImg, fileName;
 HashMap<String, OptimizedTimes> optValues1;
 HashMap<String, OptimizedTimes> optValues2;
 HashMap<String, String> previewTestValues;
-ArrayList<ArrayList<Integer>> pictureTimesArray;
+ArrayList<ArrayList<int>> pictureTimesArray;
 
 
 void setup() {
