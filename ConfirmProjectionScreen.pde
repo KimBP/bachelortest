@@ -62,10 +62,10 @@ public void confirmProjection() {
     pictureTimesArray.get(blueTime).add(i);
 
     
-    //r = (r != 0 ? 255:0);
-    //g = (r != 0 ? 255:0);
-    //b = (r != 0 ? 255:0);
+    r = (r != 0 ? 255 : 0);
+    g = (g != 0 ? 255 : 0);
+    b = (b != 0 ? 255 : 0);
 
-    //projectedImage.pixels[i] = color(r, g, b);
+    projectedImage.pixels[i] = color(r, g, b);
   }
 }
