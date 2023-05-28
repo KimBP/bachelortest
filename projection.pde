@@ -39,6 +39,9 @@ public void projection() {
 
     }
     if (timePassed >= updateTime) {
+      // Behind schedule - immediately handle next time
+      println("Behind schedule at time=" + time);
+      println("Handled " + timeArray.size() + " pixels");
       savedTime += updateTime;
     } else {
       long sleepTime = updateTime - timePassed;
