@@ -33,9 +33,11 @@ public void confirmProjection() {
   }
 
   for (int i = 0; i < projectionImg.pixels.length; i++) {
-    int r = (int)red(projectionImg.pixels[i]);
-    int g = (int)green(projectionImg.pixels[i]);
-    int b = (int)blue(projectionImg.pixels[i]);
+
+    color pixelColor = projectionImg.pixels[i];
+    int r = (int)red(pixelColor);
+    int g = (int)green(pixelColor);
+    int b = (int)blue(pixelColor);
     int redTime = 0;
     int greenTime = 0;
     int blueTime = 0;
